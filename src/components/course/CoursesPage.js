@@ -13,17 +13,17 @@ class CoursesPage extends React.Component {
 
 
 	courseRow(course, index) {
-		debugger;
+		
 		return <div key={index}>{course.title}</div>;
 	}
 
 	redirectToAddCoursePage() {
-		debugger;
+		
 		browserHistory.push('/course');
 	}
 
 	render() {
-		debugger;
+		
 		const {courses} = this.props;
 		return (
 			<div>
@@ -42,14 +42,14 @@ CoursesPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-	debugger;
+	
 	return {
 		courses: state.courses //course reducer
 	};
 }
 
 function mapDispatchToProps(dispatch) {
-	debugger;
+	
 	return {
 		actions: bindActionCreators(courseActions, dispatch)
 	};

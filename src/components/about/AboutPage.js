@@ -1,9 +1,9 @@
 import React from 'react';
 
 class AboutPage extends React.Component {
-	//debugger;
+	//
 	render () {
-		debugger;
+		
 		return (
 			<div>
 				<h1>About</h1>

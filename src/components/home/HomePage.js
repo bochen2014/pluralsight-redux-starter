@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 class HomePage extends React.Component {
 	render () {
-		debugger;
+		
 		return (
 			<div className="jumbotron">
 				<h1> Pluralsight Administration</h1>
