@@ -4,7 +4,7 @@ import SelectInput from '../common/SelectInput';
 
 //stateless function component
 const CourseForm = ({course, allAuthors, onSave, onChange, saving, errors}) => {
-	
+	console.log('course ='+ JSON.stringify(course))
 	return (
 		<form>
 			<h1>Manage Course... </h1>

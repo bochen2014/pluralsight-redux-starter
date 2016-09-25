@@ -1,23 +1,24 @@
 import React from 'react'
+import expect from 'expect'
 import TestUtils from 'react-addons-test-utils'
 import CourseForm from './CourseForm'
 
 const setup = ()=>{
     let props = {
-        course:{},   
+        course:{},
         saving: false, 
-        erros: {},      
+        errors: {},
         onSave:()=>{},
         onChange : ()=>{}
     }
     let renderer = TestUtils.createRenderer()
-    renderer.render(<CourseForm  {...props} />)
-    let output = render.getRenderOutput()
+    renderer.render(<CourseForm  {...props}/>)
+    let output = renderer.getRenderOutput()
 
     return{
         props,
         output,
-        renderer
+        renderer 
     }
 }
 describe('CourseForm via React Test Utils', ()=>{
