@@ -7,18 +7,10 @@
 // 5. Sets up global vars that mimic a browser.
 
 /* eslint-disable no-var*/
-
-/* This setting assures the .babelrc dev config (which includes
- hot module reloading code) doesn't apply for tests. then why not set to 'production' ?
-
- But also, we don't want to set it to production here for
- two reasons:
- 1. You won't see any PropType validation warnings when
- code is running in prod mode.
- 2. Tests will not display detailed error messages
- when running against production version code
- */
-process.env.NODE_ENV = 'test';
+//either set via package.json using cross-env NODE_ENV='production'
+//or set via code 
+//must set to production to suppresss proType validation warnings
+process.env.NODE_ENV = 'production'  //process.env.NODE_ENV !== 'production' ? warning(false, 'Failed propType: %s%s') : void 0;
 
 // Register babel so that it will transpile ES6 to ES5
 // before our tests run.
